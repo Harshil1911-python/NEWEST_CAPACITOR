@@ -1,0 +1,32 @@
+{
+	"appId": "com.techserenia.orbitbills",
+	"appName": "OrbitBills",
+	"webDir": "www",
+	"server": {
+		"url": "https://orbitbillsphoneapp.onrender.com/",
+		"cleartext": false,
+		"androidScheme": "https"
+	},
+	"android": {
+		"allowMixedContent": false
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 1500,
+			"backgroundColor": "#ffffff",
+			"androidSplashResourceName": "splash",
+			"showSpinner": false
+		},
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_orbit",
+			"iconColor": "#0b3d91"
+		},
+		"PushNotifications": {
+			"presentationOptions": [
+				"badge",
+				"sound",
+				"alert"
+			]
+		}
+	}
+}
