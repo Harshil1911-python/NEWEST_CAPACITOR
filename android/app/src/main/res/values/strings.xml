@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">OrbitBills</string>
-    <string name="title_activity_main">OrbitBills</string>
+    <string name="app_name">OrbitBillsInd</string>
+    <string name="title_activity_main">OrbitBillsInd</string>
     <string name="package_name">com.techserenia.orbitbills</string>
     <string name="custom_url_scheme">com.techserenia.orbitbills</string>
 </resources>

@@ -1,6 +1,6 @@
 {
   "appId": "com.techserenia.orbitbills",
-  "appName": "OrbitBills",
+  "appName": "OrbitBillsInd",
   "webDir": "www",
   "server": {
     "url": "https://orbitbillsphoneapp.onrender.com/",

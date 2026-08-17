@@ -16,7 +16,25 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        debug {
+            // Fixed, checked-in debug keystore so every build (local or CI) is
+            // signed identically. Without this, Gradle auto-generates a NEW
+            // random debug key on every fresh machine/CI run, which makes
+            // Android refuse to install a new APK over a previously-installed
+            // one ("App not installed as package conflicts with an existing
+            // package"). This is a debug-only key — fine to commit, not for
+            // Play Store release signing.
+            storeFile file('keystore/orbitbills-debug.keystore')
+            storePassword 'orbitbills123'
+            keyAlias 'orbitbillsdebug'
+            keyPassword 'orbitbills123'
+        }
+    }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
